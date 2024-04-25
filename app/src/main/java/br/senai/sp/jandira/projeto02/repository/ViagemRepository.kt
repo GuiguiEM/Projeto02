@@ -27,7 +27,7 @@ class ViagemRepository {
                 descricao = "Paris, a capital da França, é uma importante cidade europeia e um centro mundial de arte, moda, gastronomia e cultura.",
                 dataChegada = LocalDate.of(2014, 6 ,8),
                 dataPartida = LocalDate.of(2014, 6 ,14),
-                //imagem = painterResource(id = R.drawable.paris)
+                imagem = painterResource(id = R.drawable.paris)
 
             )
 
@@ -57,7 +57,7 @@ class ViagemRepository {
                 descricao = "Madri, a capital da Espanha, situada no centro do país, é uma cidade de avenidas elegantes e parques grandes e bem cuidados, como o Buen Retiro.",
                 dataChegada = LocalDate.of(2010, 9 ,1),
                 dataPartida = LocalDate.of(2010, 9 ,7),
-                //imagem = painterResource(id = R.drawable.madri)
+                imagem = painterResource(id = R.drawable.madri)
 
             )
 

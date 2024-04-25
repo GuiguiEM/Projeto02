@@ -18,19 +18,19 @@ class CategoriasRepository {
         val snow = Categorias(
             id = 2,
             titulo = "Snow",
-            //imagem = painterResource(id = R.drawable.montanha)
+            imagem = painterResource(id = R.drawable.floco_de_neve)
         )
 
         val beach = Categorias(
-            id = 1,
+            id = 3,
             titulo = "Beach",
-            //imagem = painterResource(id = R.drawable.montanha)
+            imagem = painterResource(id = R.drawable.praia)
         )
 
         val city = Categorias(
-            id = 1,
+            id = 4,
             titulo = "City",
-            //imagem = painterResource(id = R.drawable.montanha)
+            imagem = painterResource(id = R.drawable.cidade)
         )
 
         return listOf(montain, snow, beach, city)
