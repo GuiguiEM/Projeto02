@@ -41,6 +41,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -135,7 +136,7 @@ fun HomeScreen(controleDeNavegacao: NavHostController) {
                         modifier = Modifier.padding(start = 6.dp)
                     ) {
                         Text(
-                            text = "My Trips",
+                            text = stringResource(id = R.string.title_trips),
                             fontWeight = FontWeight.Bold,
                             color = Color.White,
                             fontSize = 24.sp

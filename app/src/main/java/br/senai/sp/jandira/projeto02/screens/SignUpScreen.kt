@@ -41,6 +41,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -48,11 +49,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import br.senai.sp.jandira.projeto02.model.Usuarios
+import br.senai.sp.jandira.projeto02.repository.UsuariosRepository
 import br.senai.sp.jandira.projeto02.ui.theme.Projeto02Theme
 
 
 @Composable
 fun SignUpScreen(controleDeNavegacao: NavHostController) {
+
+    val cr = UsuariosRepository(LocalContext.current)
 
     var userState = remember{
         mutableStateOf("")
@@ -70,7 +75,7 @@ fun SignUpScreen(controleDeNavegacao: NavHostController) {
         mutableStateOf("")
     }
 
-    var opcaoState = remember{
+    var isOver18State = remember{
         mutableStateOf(false)
     }
 
@@ -288,9 +293,9 @@ fun SignUpScreen(controleDeNavegacao: NavHostController) {
                             .offset(x = -10.dp, y = 10.dp)
                     ) {
                         Checkbox(
-                            checked = opcaoState.value,
+                            checked = isOver18State.value,
                             onCheckedChange = {opcao ->
-                                opcaoState.value = opcao
+                                isOver18State.value = opcao
                             },
                             colors = CheckboxDefaults.colors(Color(0xFF7E24FF))
                         )
@@ -306,7 +311,16 @@ fun SignUpScreen(controleDeNavegacao: NavHostController) {
                         horizontalAlignment = Alignment.End,
                     ) {
                         Button(
-                            onClick = { /*TODO*/ },
+                            onClick = {
+                                val usuarios = Usuarios(
+                                    name = userState.value,
+                                    phone = phoneState.value,
+                                    email = emailState.value,
+                                    password = passwordState.value,
+                                    isOver18 = isOver18State.value
+                                )
+                                cr.salvar(usuarios)
+                            },
                             colors = ButtonDefaults.buttonColors((Color(0xFF7E24FF))),
                             shape = RoundedCornerShape(15.dp),
                             modifier = Modifier
