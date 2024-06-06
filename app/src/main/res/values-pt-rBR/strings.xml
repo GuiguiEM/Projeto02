@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <string name="app_name">Projeto02</string>
-    <string name="title_trips">Minhas Viagens</string>
+<string name="app_name">telaLogin</string>
+<string name="tela_login">Entrar</string>
+<string name="tela_login_phrase">Faça login para continuar</string>
+<string name="email">E-mail</string>
+<string name="password">Senha</string>
+<string name="button_signin">Entrar -></string>
+<string name="dont_account">Não tem uma conta?</string>
+<string name="signUp_login">Criar conta</string>
+
+<string name="signUp">Cadastre-se</string>
+<string name="create_phrase">Crie uma nova conta</string>
+<string name="username">Usuário</string>
+<string name="phone">Telefone</string>
+<string name="email_signUp">E-mail</string>
+<string name="password_signUp">Senha</string>
+<string name="create_account">Criar Conta</string>
+<string name="signUp_phrase">Já tem uma conta?</string>
+<string name="signIn">Entrar</string>
+
+<string name="home_phrase">Você está em Paris</string>
+<string name="categories">Categorias</string>
+<string name="montain">Montanha</string>
+<string name="snow">Neve</string>
+<string name="beach">Praia</string>
+<string name="city">Cidade</string>
+<string name="touristics">Turísticos</string>
+<string name="hotel">Hotel</string>
+<string name="search_destiny">Busque seu destino</string>
+<string name="past_trips">Viagens Passadas</string>
+
 </resources>

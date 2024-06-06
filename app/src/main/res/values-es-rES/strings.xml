@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">telaLogin</string>
+    <string name="tela_login">Acceso</string>
+    <string name="tela_login_phrase">Por favor inicie sesión para continuar</string>
+    <string name="email">E-mail</string>
+    <string name="password">Contraseña</string>
+    <string name="button_signin">Iniciar sesión -></string>
+    <string name="dont_account">¿No tienes una cuenta?</string>
+    <string name="signUp_login">Inscribirse</string>
+
+
+    <string name="signUp">Inscribirse</string>
+    <string name="create_phrase">Crea una cuenta nueva</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="phone">Teléfono</string>
+    <string name="email_signUp">E-mail</string>
+    <string name="password_signUp">Contraseña</string>
+    <string name="create_account">Crear una cuenta</string>
+    <string name="signUp_phrase">¿Ya tienes una cuenta?</string>
+    <string name="signIn">Iniciar sesión</string>
+
+    <string name="home_phrase">Estás en París</string>
+    <string name="categories">Categorías</string>
+    <string name="montain">Montaña</string>
+    <string name="snow">Nieve</string>
+    <string name="beach">Playa</string>
+    <string name="city">Ciudad</string>
+    <string name="touristics">Turisticos</string>
+    <string name="hotel">Hotel</string>
+    <string name="search_destiny">Busca tu destino</string>
+    <string name="past_trips">Viajes pasados</string>
+
+</resources>

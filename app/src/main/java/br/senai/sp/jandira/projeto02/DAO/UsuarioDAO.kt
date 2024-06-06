@@ -11,17 +11,18 @@ import br.senai.sp.jandira.projeto02.model.Usuarios
 interface UsuarioDAO {
 
     @Insert
-    fun salvar(contato: Usuarios): Long
+    fun salvar(usuarios: Usuarios): Long
 
     @Update
-    fun atualizar(contato: Usuarios): Int
+    fun atualizar(usuarios: Usuarios): Int
 
     @Delete
-    fun excluir(contato: Usuarios): Int
+    fun excluir(usuarios: Usuarios): Int
 
     @Query("select * from tbl_usuarios order by name asc")
     fun listarTodosOsContatos(): List<Usuarios>
 
-    @Query("select * from tbl_usuarios where id = :id")
-    fun buscarContatoPeloID(id: Long): Usuarios
+    @Query("SELECT * FROM tbl_usuarios WHERE email = :email AND password = :senha")
+    fun logar(email: String, senha: String): Boolean
+
 }

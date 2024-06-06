@@ -2,5 +2,34 @@
     <string name="app_name">Projeto02</string>
 
 
-    <string name="title_trips">Login</string>
+    <string name="tela_login">Login</string>
+    <string name="tela_login_phrase">Please sign in to continue</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="button_signin">Sign In -></string>
+    <string name="dont_account">Don\'t have an account?</string>
+    <string name="signUp_login">Sign Up</string>
+
+
+    <string name="signUp">Sign Up</string>
+    <string name="create_phrase">Create a new account</string>
+    <string name="username">Username</string>
+    <string name="phone">Phone</string>
+    <string name="email_signUp">E-mail</string>
+    <string name="password_signUp">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="signUp_phrase">Already have an account?</string>
+    <string name="signIn">Sign in</string>
+
+    <string name="home_phrase">You\'re in Paris</string>
+    <string name="categories">Categories</string>
+    <string name="montain">Montain</string>
+    <string name="snow">Snow</string>
+    <string name="beach">Beach</string>
+    <string name="city">City</string>
+    <string name="touristics">Touristics</string>
+    <string name="hotel">Hotel</string>
+    <string name="search_destiny">Search your destiny</string>
+    <string name="past_trips">Past Trips</string>
+
 </resources>

@@ -30,6 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -37,10 +38,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import br.senai.sp.jandira.projeto02.repository.UsuariosRepository
 import br.senai.sp.jandira.projeto02.ui.theme.Projeto02Theme
 
 @Composable
 fun LoginScreen(controleDeNavegacao: NavHostController) {
+
+    val cr = UsuariosRepository(LocalContext.current)
 
     var emailState = remember{
         mutableStateOf("")
@@ -174,11 +178,14 @@ fun LoginScreen(controleDeNavegacao: NavHostController) {
                     ) {
                         Button(
                             onClick = {
-                                if(emailState.value == "aluno" && passwordState.value == "1234"){
-                                    mensagemErroState.value = ""
-                                    controleDeNavegacao.navigate("home")
-                                }else{
-                                    mensagemErroState.value = "E-mail ou senha incorretos!"
+                                if (emailState.value == "" || passwordState.value == ""){
+                                    mensagemErroState.value = "Email ou senhas incorretos"
+                                } else {
+                                    val usuario = cr.validaLogin(emailState.value, passwordState.value)
+
+                                    if(usuario){
+                                        controleDeNavegacao.navigate("home")
+                                    }
                                 }
                             },
                             colors = ButtonDefaults.buttonColors((Color(0xFF7E24FF))),

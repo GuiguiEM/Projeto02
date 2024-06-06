@@ -13,6 +13,10 @@ class UsuariosRepository(context: Context) {
         return db.salvar(usuarios)
     }
 
+    fun validaLogin(email:String, senha:String): Boolean {
+        return db.logar(email, senha)
+    }
+
     fun listarTodosOsUsuarios(): List<Usuarios>{
         return listarTodosOsUsuarios()
     }

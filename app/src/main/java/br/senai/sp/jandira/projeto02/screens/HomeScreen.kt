@@ -151,7 +151,8 @@ fun HomeScreen(controleDeNavegacao: NavHostController) {
                     .padding(top = 14.dp, start = 20.dp)
             ) {
                 Row {
-                    Text(text = "Categories")
+                    Text(text =  stringResource(id = R.string.categories)
+                    )
                 }
                 Spacer(modifier = Modifier.height(10.dp))
                 LazyRow(
