@@ -40,6 +40,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -136,7 +137,7 @@ fun HomeScreen(controleDeNavegacao: NavHostController) {
                         modifier = Modifier.padding(start = 6.dp)
                     ) {
                         Text(
-                            text = stringResource(id = R.string.title_trips),
+                            text = "Titulo",
                             fontWeight = FontWeight.Bold,
                             color = Color.White,
                             fontSize = 24.sp
@@ -313,8 +314,8 @@ fun HomeScreen(controleDeNavegacao: NavHostController) {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun HomeScreenPreview() {
+fun LoginPreview() {
     Projeto02Theme {
-        //HomeScreen()
+        HomeScreen(controleDeNavegacao = NavHostController(LocalContext.current))
     }
 }
